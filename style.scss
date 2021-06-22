@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color-box-1:#e38826;
+    --color-box-2:#006970;
+    --color-box-3:#004241;
+    --color-text-paragraph: rgba(255, 255, 255, 0.749);
+    --color-text :hsl(0, 0%, 95%);
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    display: grid;
+    grid-template-rows: 90vh 10vh;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    
+}
+.article-cards{
+        
+        max-width: 92.1rem;
+        align-self: center;
+        height: 50rem;
+        display: grid;
+        grid-template-rows: repeat (3, 30.7rem);
+        grid-auto-flow: column;
+    
+}
+.card{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding:4.7rem;
+    font-family: 'Lexend Deca', sans-serif;    
+    &__heading{
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-family: 'Big Shoulders Display', cursive;
+        color:var(--color-text);
+        padding-bottom: 3rem;
+
+
+    }
+    &__svg{
+        width: 6.4rem;
+        height: 4rem;
+        padding-bottom: 3.6rem;
+    }
+    &__paragraph{
+        max-width: 21rem;
+        color:var(--color-text-paragraph);
+        line-height: 2.5rem;
+    }
+    &__cta{
+        background-color: #fff;
+        display: flex;
+        width: 14.8rem;
+        height:4.8rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4.8rem;
+        margin-top: auto;
+        &--sedans{
+            color: var(--color-box-1);
+        }
+        &--suvs{
+            color: var(--color-box-2);
+        }
+        &--luxury{
+            color: var(--color-box-3);
+        }
+        &:hover{
+            background-color: transparent;
+            color:var(--color-text);
+            border:2px solid var(--color-text);
+            cursor: pointer;
+        }
+    }
+    &--1{
+
+        background-color: var(--color-box-1);
+        border-radius: 1rem 0 0 1rem;
+    }
+    &--2{
+        background-color: var(--color-box-2);
+    }
+    &--3{
+        background-color: var(--color-box-3);
+        border-radius: 0 1rem 1rem 0;
+    }
+
+}
