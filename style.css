@@ -55,6 +55,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: var(--color-text);
 }
 
 @media (max-width: 1000px) {
@@ -113,17 +114,11 @@ body {
 }
 
 .card__heading {
-  font-size: 3rem;
+  font-size: 3.9rem;
   text-transform: uppercase;
   font-family: 'Big Shoulders Display', cursive;
   color: var(--color-text);
   padding-bottom: 3rem;
-}
-
-@media (max-width: 600px) {
-  .card__heading {
-    font-size: 3.9rem;
-  }
 }
 
 .card__svg {

@@ -49,7 +49,7 @@ body{
         height: 132.3rem;
             
     }
-
+    background-color: var(--color-text);
     
 }
 .article-cards{
@@ -83,10 +83,7 @@ body{
     padding:var(--card-padding);
     font-family: 'Lexend Deca', sans-serif;    
     &__heading{
-        font-size: 3rem;
-        @media (max-width:600px) {
-            font-size: 3.9rem;
-        }
+        font-size: 3.9rem;
         text-transform: uppercase;
         font-family: 'Big Shoulders Display', cursive;
         color:var(--color-text);
