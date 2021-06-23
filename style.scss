@@ -7,38 +7,86 @@
     --color-box-2:#006970;
     --color-box-3:#004241;
     --color-text-paragraph: rgba(255, 255, 255, 0.749);
-    --color-text :hsl(0, 0%, 95%);
+    --color-text :#f2f2f2;
+    --cards-height : 50rem;
+    --card-paragraph-width :21rem;
+    --card-padding:4.7rem;
+    @media (max-width:1000px) {
+        --cards-height : 107.6rem;
+        --card-paragraph-width :51.4rem;
+        
+    }
+    @media (max-width:700px) {
+        --card-padding:3.5rem;
+        
+    }
+    @media (max-width:600px) {
+        --cards-height : 132.5rem;
+        --card-paragraph-width :23.5rem;
+        --card-padding:4.7rem;
+        
+    }
 }
 
 html{
     font-size: 62.5%;
 }
 body{
-    display: grid;
-    grid-template-rows: 90vh 10vh;
-    width: 100vw;
+
+    width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    @media (max-width:1000px) {
+        padding:9rem 0;
+        height: 107.6rem;
+        
+    }
+    @media (max-width:600px) {
+        padding:9rem 0;
+        height: 132.3rem;
+            
+    }
+
     
 }
 .article-cards{
         
         max-width: 92.1rem;
         align-self: center;
-        height: 50rem;
+        height: var(--cards-height);
+        
         display: grid;
-        grid-template-rows: repeat (3, 30.7rem);
+        grid-template-columns: repeat (3, 30.7rem);
         grid-auto-flow: column;
+        @media (max-width:1000px) {
+            // width: 61rem;
+            grid-template-rows: repeat (3, 61rem);
+            grid-auto-flow: row;
+            
+        }
+        @media (max-width:600px) {
+            grid-template-rows: repeat (3, 40rem);
+            grid-auto-flow: row;
+            
+        }
+        
+
     
 }
 .card{
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    padding:4.7rem;
+    padding:var(--card-padding);
     font-family: 'Lexend Deca', sans-serif;    
     &__heading{
         font-size: 3rem;
+        @media (max-width:600px) {
+            font-size: 3.9rem;
+        }
         text-transform: uppercase;
         font-family: 'Big Shoulders Display', cursive;
         color:var(--color-text);
@@ -52,7 +100,7 @@ body{
         padding-bottom: 3.6rem;
     }
     &__paragraph{
-        max-width: 21rem;
+        max-width: var(--card-paragraph-width);
         color:var(--color-text-paragraph);
         line-height: 2.5rem;
     }
@@ -85,6 +133,9 @@ body{
 
         background-color: var(--color-box-1);
         border-radius: 1rem 0 0 1rem;
+        @media (max-width:1000px) {
+            border-radius: 1rem 1rem 0 0;
+        }
     }
     &--2{
         background-color: var(--color-box-2);
@@ -92,6 +143,9 @@ body{
     &--3{
         background-color: var(--color-box-3);
         border-radius: 0 1rem 1rem 0;
+        @media (max-width:1000px) {
+            border-radius: 0 0 1rem 1rem;
+        }
     }
 
 }
